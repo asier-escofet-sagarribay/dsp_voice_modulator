@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVEchoTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital Signal Processing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnW-yD-JGu">
+                                <rect key="frame" x="42" y="45.5" width="236" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIT-OG-WoV">
+                                <rect key="frame" x="10" y="96" width="294" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="jiy-cV-Les"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1000" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="YOk-gm-MB8" userLabel="Pitch Slider">
+                                <rect key="frame" x="8" y="133" width="298" height="31"/>
+                                <connections>
+                                    <action selector="pitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZqE-q7-kv1"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u2-4Z-J5z">
+                                <rect key="frame" x="10" y="179.5" width="294" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="190" translatesAutoresizingMaskIntoConstraints="NO" id="ytF-1O-86Z">
+                                <rect key="frame" x="10" y="306" width="294" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Echo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC0-dF-VJp">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Echo" translatesAutoresizingMaskIntoConstraints="NO" id="2uh-vJ-j5i" userLabel="Echo Switch">
+                                        <rect key="frame" x="245" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="echoPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="P0g-pC-uQb"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-8m-QeH">
+                                <rect key="frame" x="10" y="352" width="294" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-FY-cc5">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Reverb" translatesAutoresizingMaskIntoConstraints="NO" id="bMu-v8-Se5" userLabel="Reverb Switch">
+                                        <rect key="frame" x="245" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="reverbPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="tTy-UQ-lvs"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcz-UD-ren" customClass="LevelMeterView" customModule="AVEchoTouch" customModuleProvider="target">
+                                <rect key="frame" x="10" y="410" width="294" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7bE-Ev-TqG"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6B-OY-ChV" userLabel="Rate Slider">
+                                <rect key="frame" x="8" y="217" width="298" height="31"/>
+                                <connections>
+                                    <action selector="rateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IMo-6P-ofL"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9M-xA-eNZ">
+                                <rect key="frame" x="10" y="475" width="294" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="F3K-9Z-XmI"/>
+                                    <constraint firstAttribute="height" constant="34" id="yZZ-Rf-vgd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="f9M-26-0yG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="4Da-Rs-0ut"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="leading" secondItem="7u2-4Z-J5z" secondAttribute="leading" id="5rZ-y8-shz"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="trailing" secondItem="G9M-xA-eNZ" secondAttribute="trailing" id="8ep-Re-LNK"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="leading" secondItem="YOk-gm-MB8" secondAttribute="leading" id="8jG-DU-HfH"/>
+                            <constraint firstItem="YnW-yD-JGu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="9rv-bq-Dc8"/>
+                            <constraint firstItem="YOk-gm-MB8" firstAttribute="top" secondItem="zIT-OG-WoV" secondAttribute="bottom" constant="8" id="Ak4-xu-UGU"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="centerX" secondItem="GcQ-8m-QeH" secondAttribute="centerX" id="B1x-NH-X46"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="centerX" secondItem="ytF-1O-86Z" secondAttribute="centerX" id="BsR-5D-z3V"/>
+                            <constraint firstItem="zIT-OG-WoV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="96" id="CAH-Dq-PZE"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="trailing" secondItem="l6B-OY-ChV" secondAttribute="trailing" id="FVC-oZ-DiR"/>
+                            <constraint firstItem="G9M-xA-eNZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="HyI-BS-IPd"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="leading" secondItem="ytF-1O-86Z" secondAttribute="leading" id="IjL-0W-Vx7"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="leading" secondItem="G9M-xA-eNZ" secondAttribute="leading" id="K0M-Xe-mVp"/>
+                            <constraint firstItem="l6B-OY-ChV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="217" id="KUO-8n-Vhj"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="410" id="MAZ-aF-aLv"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="leading" secondItem="zIT-OG-WoV" secondAttribute="leading" id="Nxn-2E-6AZ"/>
+                            <constraint firstItem="YnW-yD-JGu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SEQ-jn-j8k"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SRW-sc-Fdx"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="top" secondItem="GcQ-8m-QeH" secondAttribute="bottom" constant="27" id="W2h-yO-DT8"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="leading" secondItem="l6B-OY-ChV" secondAttribute="leading" id="XGS-gQ-gHX"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="trailing" secondItem="zIT-OG-WoV" secondAttribute="trailing" id="YLL-I1-Ggh"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="leading" secondItem="GcQ-8m-QeH" secondAttribute="leading" id="f4h-tX-7AA"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="trailing" secondItem="YOk-gm-MB8" secondAttribute="trailing" id="gqA-S9-Jqu"/>
+                            <constraint firstItem="zIT-OG-WoV" firstAttribute="top" secondItem="YnW-yD-JGu" secondAttribute="bottom" constant="30" id="oiO-ON-Y5S"/>
+                            <constraint firstItem="dcz-UD-ren" firstAttribute="trailing" secondItem="7u2-4Z-J5z" secondAttribute="trailing" id="ueY-ST-9HC"/>
+                            <constraint firstItem="l6B-OY-ChV" firstAttribute="top" secondItem="7u2-4Z-J5z" secondAttribute="bottom" constant="17" id="wEc-8t-XOf"/>
+                            <constraint firstItem="ytF-1O-86Z" firstAttribute="top" secondItem="l6B-OY-ChV" secondAttribute="bottom" constant="59" id="z4V-4X-YSS"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="echoSwitch" destination="2uh-vJ-j5i" id="qJ5-P6-Iqp"/>
+                        <outlet property="pitchSlider" destination="YOk-gm-MB8" id="Nff-EJ-piG"/>
+                        <outlet property="rateSlider" destination="l6B-OY-ChV" id="AWK-El-LAN"/>
+                        <outlet property="recordButton" destination="G9M-xA-eNZ" id="4CI-Ab-Od4"/>
+                        <outlet property="reverbSwitch" destination="bMu-v8-Se5" id="WQe-s9-hdg"/>
+                        <outlet property="voiceIOMeter" destination="dcz-UD-ren" id="wyp-Yo-4gl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.125" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+</document>
